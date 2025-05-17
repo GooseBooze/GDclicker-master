@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://camcp0dkn8cbe"]
+
+[ext_resource type="Script" uid="uid://njvcssgbaxew" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://bsxkeixwsyfxx" path="res://cum/ChatGPT Image May 9, 2025, 04_30_31 PM.png" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://cuthkvu8hov37" path="res://cum/Cookie.png" id="3_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cb3pdfdgvyohq" path="res://cum/CookieClicked.png" id="4_o6xl0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0, 0, 0, 0.596078)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.0835981, 0.0811251, 0.16386, 1)
+border_width_left = 5
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jyhfs")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UI"]
+custom_minimum_size = Vector2(800, 640)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_tbgi4")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+
+[node name="CookieButton" type="TextureButton" parent="UI/HBoxContainer/CenterContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_tefeu")
+texture_pressed = ExtResource("4_o6xl0")
+
+[node name="PointerHolder" type="Control" parent="UI/HBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="CookieCounterBG" type="Control" parent="UI/HBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="CounterLabel" type="Label" parent="UI/HBoxContainer/CenterContainer/CookieCounterBG"]
+layout_mode = 0
+offset_left = -71.0
+offset_top = -295.0
+offset_right = 57.0
+offset_bottom = -242.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1bvp3")
+text = "Cookies:"
+
+[node name="Panel" type="Panel" parent="UI/HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5vw27")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/HBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 228.0
+offset_right = 336.0
+offset_bottom = 628.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/HBoxContainer/Panel/ScrollContainer"]
+custom_minimum_size = Vector2(320, 415)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="UpgradeButton" type="Button" parent="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GrandmaButton" type="Button" parent="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FarmButton" type="Button" parent="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MineButton" type="Button" parent="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FactoryButton" type="Button" parent="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BankButton" type="Button" parent="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AutoSaveTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="UI/HBoxContainer/CenterContainer/CookieButton" to="." method="on_cookie_clicked"]
+[connection signal="pressed" from="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/UpgradeButton" to="." method="on_upgrade_clicked"]
+[connection signal="pressed" from="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/GrandmaButton" to="." method="on_grandma_clicked"]
+[connection signal="pressed" from="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/FarmButton" to="." method="on_farm_clicked"]
+[connection signal="pressed" from="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/MineButton" to="." method="on_mine_clicked"]
+[connection signal="pressed" from="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/FactoryButton" to="." method="on_factory_clicked"]
+[connection signal="pressed" from="UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/BankButton" to="." method="on_bank_clicked"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkik6fyb64ub1"]
+
+[ext_resource type="Script" uid="uid://6doapkd4quam" path="res://scripts/music.gd" id="1_0j54u"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_0j54u")
+
+[node name="MusicStream" type="AudioStreamPlayer" parent="."]
