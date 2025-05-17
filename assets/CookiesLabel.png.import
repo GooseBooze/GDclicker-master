@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmd0v1mobkykk"
-path="res://.godot/imported/CookiesLabel.png-af80c89335189b3ad6dcf2b691832d12.ctex"
+path="res://.godot/imported/CookiesLabel.png-de5f1db91bf28a2c7051f567de6c5276.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cum/CookiesLabel.png"
-dest_files=["res://.godot/imported/CookiesLabel.png-af80c89335189b3ad6dcf2b691832d12.ctex"]
+source_file="res://assets/CookiesLabel.png"
+dest_files=["res://.godot/imported/CookiesLabel.png-de5f1db91bf28a2c7051f567de6c5276.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb3pdfdgvyohq"
-path="res://.godot/imported/CookieClicked.png-f971c39d4b9ccdae909a80b34f1042e0.ctex"
+uid="uid://bb2d5nrjeqxdw"
+path="res://.godot/imported/Clicker.png-744c0011faabcaec98468bff5ce5506c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cum/CookieClicked.png"
-dest_files=["res://.godot/imported/CookieClicked.png-f971c39d4b9ccdae909a80b34f1042e0.ctex"]
+source_file="res://assets/Clicker.png"
+dest_files=["res://.godot/imported/Clicker.png-744c0011faabcaec98468bff5ce5506c.ctex"]
 
 [params]
 

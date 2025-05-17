@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvflpbhhv5f2c"]
 
 [ext_resource type="Script" uid="uid://b34nmwgoejdb0" path="res://scripts/pointer.gd" id="1_7i2cf"]
-[ext_resource type="Texture2D" uid="uid://bb2d5nrjeqxdw" path="res://cum/Clicker.png" id="2_tc21l"]
+[ext_resource type="Texture2D" uid="uid://bb2d5nrjeqxdw" path="res://assets/Clicker.png" id="2_tc21l"]
 
 [sub_resource type="Animation" id="Animation_atorx"]
 length = 0.001

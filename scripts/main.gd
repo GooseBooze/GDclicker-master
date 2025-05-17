@@ -32,7 +32,7 @@ var pointer_count: int = 0
 # ==== Scene and UI References ====
 @onready var cookie_label = $UI/HBoxContainer/CenterContainer/CookieCounterBG/CounterLabel
 @onready var cookie_button = $UI/HBoxContainer/CenterContainer/CookieButton
-@onready var timer = $Timer
+
 @onready var upgrade_button = $UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/UpgradeButton
 @onready var pointer_holder = $UI/HBoxContainer/CenterContainer/PointerHolder
 @onready var grandma_button = $UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/GrandmaButton
@@ -121,7 +121,6 @@ func calculate_cps() -> float:
 
 func _ready():
 	load_game()
-	timer.timeout.connect(on_timer_timeout)
 	auto_save_timer.wait_time = AUTO_SAVE_INTERVAL
 	auto_save_timer.timeout.connect(auto_save)
 	auto_save_timer.start()
@@ -133,9 +132,6 @@ func _ready():
 
 	# Start the music
 	music_controller.play_random_track()
-	
-	if cookies_per_second > 0:
-		timer.start()
 
 	update_label()
 	update_upgrade_button_text()
@@ -177,8 +173,7 @@ func on_grandma_clicked():
 		cookies -= cost
 		grandma_count += 1
 		cookies_per_second += 1
-		if timer.is_stopped():
-			timer.start()
+
 		update_grandma_button_text()
 		update_label()
 
@@ -188,8 +183,7 @@ func on_farm_clicked():
 		cookies -= cost
 		farm_count += 1
 		cookies_per_second += 8
-		if timer.is_stopped():
-			timer.start()
+
 		update_farm_button_text()
 		update_label()
 
@@ -199,8 +193,7 @@ func on_mine_clicked():
 		cookies -= cost
 		mine_count += 1
 		cookies_per_second += 47
-		if timer.is_stopped():
-			timer.start()
+
 		update_mine_button_text()
 		update_label()
 
@@ -210,8 +203,7 @@ func on_factory_clicked():
 		cookies -= cost
 		factory_count += 1
 		cookies_per_second += 260
-		if timer.is_stopped():
-			timer.start()
+
 		update_factory_button_text()
 		update_label()
 
@@ -221,8 +213,7 @@ func on_bank_clicked():
 		cookies -= cost
 		bank_count += 1
 		cookies_per_second += 1400
-		if timer.is_stopped():
-			timer.start()
+
 		update_bank_button_text()
 		update_label()
 
@@ -273,8 +264,7 @@ func update_factory_button_text():
 func update_bank_button_text():
 	bank_button.text = "Buy Bank (+1400 CPS)\nCost: %d cookies" % get_bank_cost()
 
-func on_timer_timeout():
-	pass
+
 
 # ===== Visual Pointer Spawn System =====
 
