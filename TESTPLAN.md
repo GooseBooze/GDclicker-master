@@ -1,5 +1,7 @@
 The way i intend to test the program is by launching it in debug mode, as it retains all functionality and at the same time outputs errors in the debugger.
-Errors might look like this:
+
+the error could be a visual bug or a button which have been wrongfully assigned a variable. 
+errors might look like this:
 "
 E 0:00:00:615   main.gd:44 @ @implicit_ready(): Node not found: "Music" (relative to "/root/Main").
   <C++ Error>   Method/function failed. Returning: nullptr
@@ -8,11 +10,11 @@ E 0:00:00:615   main.gd:44 @ @implicit_ready(): Node not found: "Music" (relativ
 "
 This error occurs because the variable music_controller is trying to connect itself to a non existent node named Music.
 
-Or the error could be a visual bug or a button which have been wrongfully assigned a variable. 
+Or 
 
 
 
-Errors I have encountered while making this.
+errors I have encountered while making this.
 
 1. The amount of visual pointers would increase even when upgrading other buildings than the pointer itself.
   Fix: Assign a variable to the pointers to use instead of being created by the amount of clicks per second.
