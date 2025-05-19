@@ -41,7 +41,7 @@ var pointer_count: int = 0
 @onready var factory_button = $UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/FactoryButton
 @onready var bank_button = $UI/HBoxContainer/Panel/ScrollContainer/VBoxContainer/BankButton
 @onready var auto_save_timer = $AutoSaveTimer
-@onready var music_controller = $Music
+@onready var music_controller = $"." #I needed to assign a value to this, even though it does nothing than declare the variable, for it's existence!
 
 #Pointersignal
 signal PointerSignal
